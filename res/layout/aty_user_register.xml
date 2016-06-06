@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.hp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.hp.widget.TopBar
+        android:id="@+id/topbar_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftBackground="@drawable/icon_back"
+        app:titleColor="@color/black"
+        app:topbarBackground="@color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dividercolor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44"
+            android:layout_marginLeft="@dimen/margin36"
+            android:layout_marginRight="@dimen/margin36"
+            android:layout_marginTop="@dimen/margin44"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/edt_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:drawableLeft="@drawable/icon_user"
+                android:drawablePadding="@dimen/margin10"
+                android:ems="10"
+                android:hint="@string/please_input_telphone_number"
+                android:inputType="number" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/margin36"
+            android:layout_marginRight="@dimen/margin36"
+            android:background="@color/dividercolor" />
+
+        <LinearLayout
+            android:id="@+id/ll_identifyCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44"
+            android:layout_marginRight="@dimen/margin36"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center_vertical"
+            android:paddingLeft="67dp" >
+
+            <EditText
+                android:id="@+id/edt_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/inputEncode" />
+
+            <Button
+                android:id="@+id/btn_getEncode"
+                android:layout_width="70dp"
+                android:layout_height="@dimen/margin36"
+                android:background="@drawable/bg_get_yzm"
+                android:text="@string/getEncode"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/margin36"
+            android:layout_marginRight="@dimen/margin36"
+            android:background="@color/dividercolor" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44"
+            android:layout_marginLeft="@dimen/margin36"
+            android:layout_marginRight="@dimen/margin36"
+            android:layout_marginTop="@dimen/margin36"
+            android:background="@drawable/bg_btn_register"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

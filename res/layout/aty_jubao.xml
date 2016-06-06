@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <com.hp.widget.TopBar
+        android:id="@+id/topbar_jubao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.hp.widget.TopBar>
+
+    <RadioGroup
+        android:id="@+id/rdg_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/margin16" >
+
+        <RadioButton
+            android:id="@+id/rbtn_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="垃圾营销" />
+
+        <RadioButton
+            android:id="@+id/rbtn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不实信息" />
+
+        <RadioButton
+            android:id="@+id/rbtn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="有害信息" />
+
+        <RadioButton
+            android:id="@+id/rbtn_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="违法信息" />
+
+        <RadioButton
+            android:id="@+id/rbtn_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="淫秽色情" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edt_jubao"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/white"
+        android:gravity="left|top"
+        android:hint="请详细填写，以确保举报能够被受理"
+        android:padding="@dimen/margin16"
+        android:textColor="@color/textcolor2"
+        android:textSize="@dimen/textsize14" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/tgj_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background" >
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <RadioGroup
+        android:id="@+id/tgj_main_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/tgj_main_tab_item_order"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_user_bg"
+            android:text="@string/tgi_tab_order" />
+
+        <RadioButton
+            android:id="@+id/tgj_main_tab_item_message"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_square_bg"
+            android:text="@string/tgj_tab_messge" />
+
+        <RadioButton
+            android:id="@+id/tgj_main_tab_item_user"
+            style="@style/main_tab_item"
+            android:checked="true"
+            android:drawableTop="@drawable/main_tab_home_bg"
+            android:text="@string/tgj_tab_user" />
+    </RadioGroup>
+
+</LinearLayout>

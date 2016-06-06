@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin46"
+    android:background="@color/SysColor"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_topbar_left"
+        android:layout_width="50dip"
+        android:layout_height="match_parent"
+        android:background="@drawable/ease_common_tab_bg"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/iv_topbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_back_white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_topbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/textsize18" />
+
+    <RelativeLayout
+        android:id="@+id/rl_topbar_right"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ease_common_tab_bg" >
+
+        <ImageView
+            android:id="@+id/iv_toptar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+</RelativeLayout>

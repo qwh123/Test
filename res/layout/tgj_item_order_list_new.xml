@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin16" >
+
+    <ImageView
+        android:id="@+id/iv_tgj_neworder_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin16"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_tgj_neworder_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:text="轰趴asdasdas dasd a"
+            android:textColor="@color/textcolor1"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/tv_tgj_neworder_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="2015-10-10"
+            android:textColor="@color/textcolor2"
+            android:textSize="@dimen/textsize12" />
+
+        <TextView
+            android:id="@+id/tv_tgj_neworder_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:textColor="@color/textcolor2"
+            android:textSize="@dimen/textsize12" />
+
+        <TextView
+            android:id="@+id/tv_tgj_neworder_newprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="999"
+            android:textColor="@color/SysColor"
+            android:textSize="@dimen/textsize12" />
+    </LinearLayout>
+
+</LinearLayout>

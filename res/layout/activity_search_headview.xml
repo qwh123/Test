@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/ll_search_headview"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="@dimen/margin10"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin10"
+        android:text="大家都在搜"
+        android:textColor="@color/textcolor2"
+        android:textSize="@dimen/textsize14" />
+
+    <com.hp.widget.MyGridView
+        android:id="@+id/gv_search_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:numColumns="5"
+        android:paddingLeft="@dimen/margin16"
+         android:paddingRight="@dimen/margin16"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" >
+    </com.hp.widget.MyGridView>
+
+    <TextView
+        android:id="@+id/tv_search_hot_null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂无热词"
+        android:textColor="@color/textcolor2"
+        android:visibility="gone"
+        android:textSize="@dimen/textsize14" />
+
+</LinearLayout>

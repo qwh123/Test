@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_home_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:background="@color/SysColor" >
+
+        <Button
+            android:id="@+id/btn_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin10"
+            android:background="@null"
+            android:drawableRight="@drawable/bg_btn_city_xb"
+            android:text="获取中"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_home" />
+
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin10"
+            android:background="@null"
+            android:src="@drawable/home_search_big" />
+    </RelativeLayout>
+
+    <com.hp.widget.PullToRefreshView
+        android:id="@+id/sc_homeparty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 轮播图片 -->
+                <!-- <include layout="@layout/banner_slideshow" /> -->
+
+                <fragment
+                    android:id="@+id/fragment_cycle_viewpager_content"
+                    android:name="com.hp.fragment.CycleViewPagerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/dividercolor" />
+
+                <com.hp.widget.MyGridView
+                    android:id="@+id/gv_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:padding="10dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" >
+                </com.hp.widget.MyGridView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/dividercolor" />
+                <!-- 展示轰趴头条 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin38"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin16" >
+
+                    <ImageView
+                        android:id="@+id/iv_hometop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bg_top" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="@dimen/margin16"
+                        android:layout_marginLeft="@dimen/margin3"
+                        android:layout_marginRight="@dimen/margin10"
+                        android:background="@color/dividercolor" />
+
+                    <TextView
+                        android:id="@+id/tv_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="爱上的对方"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize14" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin10"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:text="精选推荐"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize16" />
+                </RelativeLayout>
+                <!-- 展示推荐商品的列表 -->
+
+                <com.hp.widget.MyListView
+                    android:id="@+id/lv_goods"
+                    android:dividerHeight="@dimen/margin10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+                </com.hp.widget.MyListView>
+            </LinearLayout>
+        </ScrollView>
+    </com.hp.widget.PullToRefreshView>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background" >
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dividercolor" />
+
+    <RadioGroup
+        android:id="@+id/main_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/main_tab_item_home"
+            style="@style/main_tab_item"
+            android:checked="true"
+            android:drawableTop="@drawable/main_tab_home_bg"
+            android:text="@string/home" />
+
+        <RadioButton
+            android:id="@+id/main_tab_item_square"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_square_bg"
+            android:text="@string/square" />
+
+        <RadioButton
+            android:id="@+id/main_tab_item_games"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_games_bg"
+            android:text="@string/message" />
+
+        <RadioButton
+            android:id="@+id/main_tab_item_user"
+            style="@style/main_tab_item"
+            android:drawableTop="@drawable/main_tab_user_bg"
+            android:text="@string/user" />
+    </RadioGroup>
+
+</LinearLayout>

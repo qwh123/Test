@@ -1,0 +1,538 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_homeDetailLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background" >
+
+    <!-- 预定按钮 -->
+
+    <Button
+        android:id="@+id/btn_book"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:layout_alignParentBottom="true"
+        android:background="@color/SysColor"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize16"
+        tools:text="@string/book_now" />
+
+    <include
+        android:id="@+id/home_detail_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_book"
+        android:layout_alignParentTop="true"
+        layout="@layout/loading"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_book"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 显示宣传图片 -->
+
+            <ImageView
+                android:id="@+id/iv_deail_top_img"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:scaleType="fitXY" />
+
+            <!-- 显示类型价格和收藏状态 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/margin10"
+                android:paddingTop="@dimen/margin10" >
+
+                <TextView
+                    android:id="@+id/tv_good_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize18"
+                    tools:text="鼓楼私人别墅派对" />
+
+                <TextView
+                    android:id="@+id/tv_good_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_good_title"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:textColor="@color/SysColor"
+                    android:textSize="@dimen/textsize16"
+                    tools:text="￥900" />
+
+                <TextView
+                    android:id="@+id/tv_good_oldprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_good_title"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_toRightOf="@id/tv_good_price"
+                    android:background="@drawable/icon_hengxian"
+                    android:text="￥1900"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="@dimen/textsize16" />
+
+                <CheckBox
+                    android:id="@+id/cb_good_fav"
+                    style="@style/CustomCheckboxTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin16" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin16" >
+
+                <TextView
+                    android:id="@+id/tv_detail_good_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/home_detail_choose"
+                    android:drawablePadding="@dimen/margin3"
+                    android:text="未消费退款"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="@dimen/textsize14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:drawableLeft="@drawable/home_detail_choose"
+                    android:drawablePadding="@dimen/margin3"
+                    android:text="过期退款"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="@dimen/textsize14" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_detail_good_hui"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin16"
+                android:paddingRight="@dimen/margin16" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_home_detail_hui"
+                    android:drawablePadding="@dimen/margin3"
+                    android:gravity="center_vertical"
+                    android:text="团购优惠"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="@dimen/textsize14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icon_next_huise" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dividercolor" />
+            <!-- 显示地理位置和电话联系 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44"
+                android:background="@color/white"
+                android:divider="@drawable/icon_shuxian"
+                android:showDividers="middle" >
+
+                <TextView
+                    android:id="@+id/tv_detail_good_adress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_adress"
+                    android:drawablePadding="5dp"
+                    android:paddingRight="5dp"
+                    tools:text="商家商商商商家商家" />
+
+                <ImageButton
+                    android:id="@+id/ibtn_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:layout_marginRight="@dimen/margin16"
+                    android:background="@color/white"
+                    android:src="@drawable/icon_tel" />
+            </LinearLayout>
+            <!-- 活动介绍(活动) -->
+
+            <LinearLayout
+                android:id="@+id/ll_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/tv_hostname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin16"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize16"
+                        tools:text="主办方：福建轰趴兔网络科技有限公司" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/margin10"
+                    android:paddingLeft="@dimen/margin16" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/margin44" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/home_detail_title"
+                            android:drawablePadding="@dimen/margin3"
+                            android:text="活动介绍"
+                            android:textColor="@color/textcolor1"
+                            android:textSize="@dimen/textsize18" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/dividercolor" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize14"
+                        tools:text="活动类型:音乐" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_begintime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize14"
+                        tools:text="开始时间:2015-10-10 19:00" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_endtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize14"
+                        tools:text="结束时间:2015-10-10 22:00" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_stop_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize14"
+                        tools:text="报名截止:2015-10-10 14:00" />
+
+                    <TextView
+                        android:id="@+id/tv_activity_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize14"
+                        tools:text="报名人数:12/50" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 选择场次 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_choose"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/white"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:text="选择场次"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin16"
+                    android:src="@drawable/icon_next_huise" />
+            </RelativeLayout>
+            <!-- 显示商家描述 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin16"
+                android:paddingLeft="@dimen/margin16"
+                android:paddingRight="@dimen/margin16" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin44" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="5dp"
+                        android:drawableLeft="@drawable/home_detail_title"
+                        android:drawablePadding="@dimen/margin3"
+                        android:text="简要描述:"
+                        android:textColor="@color/textcolor1"
+                        android:textSize="@dimen/textsize18" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/dividercolor" />
+                <!-- com.hp.utils.CollapsibleTextView -->
+
+                <TextView
+                    android:id="@+id/tv_businessdes_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="@dimen/textsize14"
+                    tools:text="这是商家对该商品的描述。。。这是商家对该商品的描述。。。这是商家对该商品的描述。。。" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dividercolor" />
+            <!-- 查看更多图文 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_more"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44"
+                android:background="@color/white" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:gravity="center"
+                    android:text="查看更多图文"
+                    android:textColor="@color/SysColor"
+                    android:textSize="@dimen/textsize14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin16"
+                    android:src="@drawable/icon_next_huise" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin44"
+                    android:layout_marginLeft="@dimen/margin16" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/home_detail_title"
+                        android:drawablePadding="@dimen/margin3"
+                        android:text="购票须知"
+                        android:textColor="@color/textcolor1"
+                        android:textSize="@dimen/textsize18" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/dividercolor" />
+
+                <com.hp.widget.CollapsibleTextView
+                    android:id="@+id/tv_businessdes_beforebuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin10"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:layout_marginRight="@dimen/margin16"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="@dimen/textsize14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin44" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin16"
+                        android:drawableLeft="@drawable/home_detail_title"
+                        android:drawablePadding="@dimen/margin3"
+                        android:text="趴友点评："
+                        android:textColor="@color/textcolor1"
+                        android:textSize="@dimen/textsize18" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/dividercolor" />
+
+                <ImageView
+                    android:id="@+id/iv_comment_null"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bg_comment_null"
+                    android:visibility="visible" />
+
+                <include
+                    android:id="@+id/layout_comment"
+                    layout="@layout/item_comment_list" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/dividercolor" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin44" >
+
+                    <RatingBar
+                        android:id="@+id/rb_av_score"
+                        style="@style/RatingBar_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin16"
+                        android:rating="5.0" />
+
+                    <TextView
+                        android:id="@+id/tv_comment_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin16"
+                        android:textColor="@color/textcolor2"
+                        android:textSize="@dimen/textsize12"
+                        tools:text="20人评价" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 显示返回和分享操作 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        android:paddingLeft="@dimen/margin16"
+        android:paddingRight="@dimen/margin16"
+        android:paddingTop="@dimen/margin16" >
+
+        <ImageButton
+            android:id="@+id/ibtn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:src="@drawable/bg_btn_back" />
+
+        <ImageButton
+            android:id="@+id/ibtn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:src="@drawable/bg_btn_share" />
+    </RelativeLayout>
+
+</RelativeLayout>

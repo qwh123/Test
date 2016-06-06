@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin10"
+    android:paddingRight="@dimen/margin10" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="系统消息:"
+            android:textColor="@color/textcolor1"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/tv_message_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin10"
+            android:text="09:00"
+            android:textColor="@color/textcolor2"
+            android:textSize="@dimen/textsize16" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_message_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        android:text="审核已通过"
+        android:textColor="@color/textcolor2"
+        android:textSize="@dimen/textsize16" />
+
+</LinearLayout>

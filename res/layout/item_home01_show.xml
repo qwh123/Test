@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 主题图片 -->
+
+    <ImageView
+        android:id="@+id/iv_home_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="220dp"
+        android:minHeight="100dp" />
+    <!-- 活动标签 -->
+
+    <ImageView
+        android:id="@+id/iv_home_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin16"
+        android:background="@color/SysColor"
+        android:scaleType="fitXY" />
+    <!-- 信息标签 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:layout_alignParentBottom="true"
+        android:background="#AA797769"
+        android:paddingLeft="@dimen/margin16"
+        android:paddingRight="@dimen/margin16" >
+
+        <TextView
+            android:id="@+id/tv_home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="轰趴管"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_home_adress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_home_title"
+            android:text="鼓楼区1.20km"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_home_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="16sp" >
+        </TextView>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/RatingBar_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_home_price" />
+
+        <TextView
+            android:id="@+id/tv_home_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_home_price"
+            android:text="2015-10-10 09:00"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

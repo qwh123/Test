@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".TestActivity" >
+
+      <com.hp.widget.TopBar
+        android:id="@+id/topbar_datepicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.hp.widget.TopBar>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar_datepicker"
+        android:layout_marginTop="@dimen/margin16"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin16"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44"
+            android:gravity="center_vertical"
+            android:text="出生日期"
+            android:textSize="@dimen/textsize14"
+            android:textColor="@color/textcolor1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividercolor" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44"
+            android:gravity="center_vertical"
+            android:text="星		座 "
+            android:textSize="@dimen/textsize14"
+            android:textColor="@color/textcolor1" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/ll" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="选择出生日期，系统将会自动转换为年龄及星座"
+            android:textColor="@color/textcolor2"
+            android:textSize="@dimen/textsize12" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/dividercolor" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

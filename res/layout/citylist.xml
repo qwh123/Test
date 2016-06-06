@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <com.hp.widget.TopBar
+        android:id="@+id/topbar_citylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.hp.widget.TopBar>
+
+    <RelativeLayout
+        android:id="@+id/searchBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/background" >
+
+        <EditText
+            android:id="@+id/input_search_query"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_edt_adress"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="5dp"
+            android:hint="@string/please_input_value_key"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="25dp"
+            android:singleLine="true"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lng_city_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/margin16" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/icon_adress" />
+
+        <TextView
+            android:id="@+id/lng_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:text="正在定位所在城市.."
+            android:textColor="#515151" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/dividercolor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <com.hp.activity.CityList.widget.ContactListViewImpl
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/dividercolor"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@color/background"
+            android:smoothScrollbar="true" />
+    </LinearLayout>
+
+</LinearLayout>

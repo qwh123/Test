@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <com.hp.widget.TopBar
+        android:id="@+id/topbar_tgj_income"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/SysColor"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin36"
+        android:paddingTop="@dimen/margin36" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未提现(元)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/tv_income_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="80sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="累计收入"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize16" />
+
+        <TextView
+            android:id="@+id/tv_income_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize18" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_withdraw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="提现"
+            android:textColor="@color/textcolor1"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>

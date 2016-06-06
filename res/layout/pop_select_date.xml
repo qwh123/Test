@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent2"
+>
+
+    <LinearLayout
+        android:id="@+id/ll_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.hp.datepicker.wheelview.WheelView
+            android:id="@+id/date_year"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <com.hp.datepicker.wheelview.WheelView
+            android:id="@+id/date_month"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <com.hp.datepicker.wheelview.WheelView
+            android:id="@+id/date_day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <com.hp.datepicker.wheelview.WheelView
+            android:id="@+id/date_hour"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+         <com.hp.datepicker.wheelview.WheelView
+            android:id="@+id/date_min"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/btn_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选取该时间"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/margin3"
+        android:layout_below="@id/ll_date"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_btn_register"
+        />
+
+</RelativeLayout>

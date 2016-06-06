@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.hp"
+    android:id="@+id/captureLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <com.zxing.view.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.hp.widget.TopBar
+            android:id="@+id/topbar_capture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:topbarBackground="@color/transparent2" />
+
+        <LinearLayout
+            android:id="@+id/ll_capture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/edt_capture_input"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="输入券码"
+                android:imeOptions="actionDone"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:paddingRight="25dp"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize12" />
+
+            <ProgressBar
+                android:id="@+id/pgb_capture"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_capture_back"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize14" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

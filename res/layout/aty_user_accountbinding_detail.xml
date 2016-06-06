@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+
+    <com.hp.widget.TopBar
+        android:id="@+id/topbar_accountbinding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar_accountbinding"
+        android:background="@color/white" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividercolor" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin16"
+            android:paddingRight="@dimen/margin16"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_WB"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44" >
+
+                <ImageView
+                    android:id="@+id/iv_weiBoIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/user_setting_weibo" />
+
+                <ImageView
+                    android:id="@+id/iv_WBRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_next_huise" />
+
+                <TextView
+                    android:id="@+id/tv_wbMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin16"
+                    android:layout_toLeftOf="@id/iv_WBRight"
+                    android:text="@string/no_binding"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:layout_toRightOf="@+id/iv_weiBoIcon"
+                    android:text="@string/weibo"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dividercolor" />
+
+            <RelativeLayout
+                android:id="@+id/rl_WX"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44" >
+
+                <ImageView
+                    android:id="@+id/iv_WXIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/user_setting_weixin" />
+
+                <ImageView
+                    android:id="@+id/iv_WXRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_next_huise" />
+
+                <TextView
+                    android:id="@+id/tv_wxMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin16"
+                    android:layout_toLeftOf="@+id/iv_WXRight"
+                    android:text="@string/no_binding"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:layout_toRightOf="@+id/iv_WXIcon"
+                    android:text="@string/weixin"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dividercolor" />
+
+            <RelativeLayout
+                android:id="@+id/rl_QQ"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44" >
+
+                <ImageView
+                    android:id="@+id/iv_QQIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/user_setting_qq" />
+
+                <ImageView
+                    android:id="@+id/iv_QQRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_next_huise" />
+
+                <TextView
+                    android:id="@+id/tv_qqMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin16"
+                    android:layout_toLeftOf="@+id/iv_QQRight"
+                    android:text="@string/no_binding"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:layout_toRightOf="@+id/iv_QQIcon"
+                    android:text="@string/qq"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dividercolor" />
+
+            <RelativeLayout
+                android:id="@+id/rl_Mobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin44" >
+
+                <ImageView
+                    android:id="@+id/iv_MobileIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/user_setting_tel" />
+
+                <ImageView
+                    android:id="@+id/iv_MobileRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_next_huise" />
+
+                <TextView
+                    android:id="@+id/tv_mobileMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin16"
+                    android:layout_toLeftOf="@+id/iv_MobileRight"
+                    android:text="@string/no_binding"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin16"
+                    android:layout_toRightOf="@+id/iv_MobileIcon"
+                    android:text="@string/mobile"
+                    android:textColor="@color/textcolor1"
+                    android:textSize="@dimen/textsize16" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/ll"
+            android:background="@color/dividercolor" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+   <com.hp.widget.TopBar
+        android:id="@+id/topbar_ureback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edt_setting_reback"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="请简要的描述一下你的意见或遇到的问题"
+        android:padding="@dimen/margin16"
+        android:textColor="@color/textcolor2"
+        android:textSize="@dimen/textsize14" />
+
+</LinearLayout>

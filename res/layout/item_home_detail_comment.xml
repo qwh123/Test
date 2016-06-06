@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.hp.widget.CircleImageView
+            android:id="@+id/iv_home_detail_comment_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/user_null" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10" >
+
+            <TextView
+                android:id="@+id/tv_home_detail_comment_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="官方"
+                android:textColor="@color/textcolor2"
+                android:textSize="@dimen/textsize16" />
+
+            <TextView
+                android:id="@+id/tv_home_detail_comment_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_home_detail_comment_nickname"
+                android:layout_marginTop="2dp"
+                android:text="10-01 09:00"
+                android:textColor="@color/textcolor2"
+                android:textSize="14sp" />
+
+            <RatingBar
+                android:id="@+id/rbhome_detail_comment"
+                style="@style/RatingBar_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_home_detail_comment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="这是这是内容这是内容这是内容这是内容这是内容这是内容这是内这是这是内容这是内容这是内容这是内容这是内容这是内容这是内容内容容内容"
+        android:textColor="@color/textcolor2"
+        android:textSize="@dimen/textsize16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:gravity="right|center_vertical"
+        >
+
+        <Button
+            android:id="@+id/btn_home_detail_comment_dianzan"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/margin16"
+            android:background="@drawable/btn_bg"
+            android:text="点赞"
+            android:textColor="@drawable/btn_color" />
+
+        <Button
+            android:id="@+id/btn_home_detail_comment_jubao"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="@dimen/margin16"
+            android:background="@drawable/btn_bg"
+            android:text="举报"
+            android:textColor="@drawable/btn_color" />
+    </LinearLayout>
+
+</LinearLayout>

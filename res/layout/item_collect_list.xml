@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin16"
+    android:paddingRight="@dimen/margin16"
+    android:paddingTop="@dimen/margin16" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_collect_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin16"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_collect_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="20"
+                android:maxLines="2"
+                android:text="测测试测试"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize16" />
+
+            <TextView
+                android:id="@+id/tv_collect_time"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin10"
+                android:layout_weight="1"
+                android:text="2015年10月01日 星期四 晚场"
+                android:textColor="@color/textcolor2"
+                android:textSize="@dimen/textsize12" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总额："
+                    android:textSize="@dimen/textsize14" />
+
+                <TextView
+                    android:id="@+id/tv_collect_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥900"
+                    android:textColor="@color/SysColor"
+                    android:textSize="@dimen/textsize14" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/dividercolor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:gravity="right|center_vertical" >
+
+        <Button
+            android:id="@+id/btn_collect_del"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_bg"
+            android:text="删除"
+            android:textColor="@drawable/btn_color" />
+    </LinearLayout>
+
+</LinearLayout>

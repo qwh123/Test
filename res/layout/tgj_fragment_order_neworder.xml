@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 订单之新订单页面 -->
+
+    <ListView
+        android:id="@+id/lv_neworder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/dividercolor"
+        android:dividerHeight="@dimen/margin3"
+        android:scrollbars="none" />
+
+</LinearLayout>

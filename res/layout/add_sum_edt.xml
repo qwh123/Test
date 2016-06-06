@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="购买数量"
+                android:textColor="@color/textcolor2"
+                android:textSize="@dimen/textsize14" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <ImageButton
+                    android:id="@+id/ibtn_detail_pop_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/icon_input_sum" />
+
+                <EditText
+                    android:id="@+id/edt_detail_pop_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:background="@drawable/edt_detail_pop"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textColor="@color/textcolor2"
+                    android:textSize="@dimen/textsize14" />
+
+                <ImageButton
+                    android:id="@+id/ibtn_detail_pop_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/icon_input_add" />
+            </LinearLayout>
+        </RelativeLayout>
+
+</LinearLayout>

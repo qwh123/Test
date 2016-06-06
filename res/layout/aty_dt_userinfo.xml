@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+      <com.hp.widget.TopBar
+        android:id="@+id/topbar_dtui"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.hp.widget.TopBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin16"
+        android:paddingRight="@dimen/margin16" >
+
+        <ImageView
+            android:id="@+id/iv_dt_userinfo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_dt_userinfo_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="那是一阵风"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/tv_dt_userinfo_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="ID:10177"
+                android:textColor="@color/textcolor2"
+                android:textSize="@dimen/textsize14" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_dt_userinfo_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/bg_btn_chat"
+            android:text="聊天"
+            android:textColor="@color/SysColor"
+            android:textSize="@dimen/textsize14" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin16" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/tv_dt_userinfo_nickname1"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/margin10"
+                android:gravity="center_vertical"
+                android:text="那一阵风"
+                android:textColor="@color/textcolor2"
+                android:textSize="@dimen/textsize14" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividercolor" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/tv_dt_userinfo_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/margin10"
+                android:gravity="center_vertical"
+                android:text="男"
+                android:textColor="@color/textcolor2"
+                android:textSize="@dimen/textsize14" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividercolor" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="所在地"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/tv_dt_userinfo_adress"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/margin10"
+                android:gravity="center_vertical"
+                android:text="福建师范大学"
+                android:textColor="@color/textcolor2"
+                android:textSize="@dimen/textsize14" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividercolor" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人简介"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize14" />
+
+            <TextView
+                android:id="@+id/tv_dt_userinfo_per"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginLeft="@dimen/margin10"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="啊啊实打啊啊实打实大师啊啊实打实大师啊啊实打实大师啊啊实打实大师实大师"
+                android:textColor="@color/textcolor2"
+                android:textSize="@dimen/textsize14" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

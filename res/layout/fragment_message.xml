@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin46"
+        android:background="@color/SysColor"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="消息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize22" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin16"
+        android:paddingRight="@dimen/margin16" >
+
+        <RelativeLayout
+            android:id="@+id/rl_message_zan"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/message_zan"
+                android:drawablePadding="@dimen/margin10"
+                android:gravity="center_vertical"
+                android:text="赞"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize16" />
+<!-- 
+            <TextView
+                android:id="@+id/tv_message_zan_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_zan"
+                android:text="13" />
+ -->
+            <ImageView
+                android:id="@+id/iv_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin10"
+                android:src="@drawable/icon_next_huise" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividercolor" />
+
+        <RelativeLayout
+            android:id="@+id/rl_message_comment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/message_pinglun"
+                android:drawablePadding="@dimen/margin10"
+                android:gravity="center_vertical"
+                android:text="评论"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize16" />
+<!-- 
+            <TextView
+                android:id="@+id/tv_message_comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_comment"
+                android:text="13" />
+ -->
+            <ImageView
+                android:id="@+id/iv_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin10"
+                android:src="@drawable/icon_next_huise" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/dividercolor" />
+
+        <RelativeLayout
+            android:id="@+id/rl_message_lt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin44" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/message_liaotian"
+                android:drawablePadding="@dimen/margin10"
+                android:gravity="center_vertical"
+                android:text="会话"
+                android:textColor="@color/textcolor1"
+                android:textSize="@dimen/textsize16" />
+<!-- 
+            <TextView
+                android:id="@+id/tv_message_lt_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_lt"
+                android:text="13" />
+ -->
+            <ImageView
+                android:id="@+id/iv_lt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/margin10"
+                android:src="@drawable/icon_next_huise" />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:paddingLeft="@dimen/margin16"
+        android:paddingRight="@dimen/margin16" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="系统消息"
+            android:textColor="@color/textcolor2"
+            android:textSize="@dimen/textsize12" />
+
+        <Button
+            android:id="@+id/btn_message_clear"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_bg"
+            android:text="清空"
+            android:textColor="@color/textcolor2"
+            android:textSize="@dimen/textsize12" />
+    </RelativeLayout>
+
+    <com.hp.widget.MyListView
+        android:id="@+id/lv_message_sys"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/dividercolor"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none" >
+    </com.hp.widget.MyListView>
+    -->
+
+</LinearLayout>

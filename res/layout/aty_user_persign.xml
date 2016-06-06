@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+     <com.hp.widget.TopBar
+        android:id="@+id/topbar_persign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/id_editContent"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:ems="120"
+        android:gravity="top"
+        android:hint="在不相聚就老了"
+        android:minLines="5"
+        android:padding="@dimen/margin10"
+        android:textSize="@dimen/textsize14" />
+
+</LinearLayout>

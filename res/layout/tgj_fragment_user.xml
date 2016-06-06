@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <!-- 顶部头像 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/bg_user" >
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" >
+
+            <com.hp.widget.CircleImageView
+                android:id="@+id/iv_userIcon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/user_null"
+                app:border_color="@color/white"
+                app:border_width="2dp" />
+
+            <TextView
+                android:id="@+id/tv_userNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_userIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="3dp"
+                android:text="轰趴兔"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize16" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 推广1 -->
+    <!-- 商家收入 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_income"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin16"
+            android:src="@drawable/tgj_income" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin16"
+            android:src="@drawable/icon_next_huise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_toRightOf="@+id/iv_income"
+            android:text="我的收入"
+            android:textColor="@color/textcolor1"
+            android:textSize="@dimen/textsize16" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dividercolor" />
+    <!-- 评价管理 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/tgj_huifu" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin16"
+            android:src="@drawable/icon_next_huise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_toRightOf="@+id/iv_comment"
+            android:text="回复点评"
+            android:textColor="@color/textcolor1"
+            android:textSize="@dimen/textsize16" />
+    </RelativeLayout>
+    <!-- 推广2 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_ad2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_tuiguang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin16"
+            android:src="@drawable/tgj_tuiguang" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin16"
+            android:src="@drawable/icon_next_huise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_toRightOf="@+id/iv_tuiguang"
+            android:text="邀请好友一起来赚钱"
+            android:textColor="@color/textcolor1"
+            android:textSize="@dimen/textsize16" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/SwitchToTheUser"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:layout_marginTop="@dimen/margin10"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/icon_switch"
+            android:drawablePadding="@dimen/margin10"
+            android:text="@string/SwitchToTheUser"
+            android:textColor="@color/SysColor"
+            android:textSize="@dimen/textsize16" />
+    </RelativeLayout>
+
+</LinearLayout>

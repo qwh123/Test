@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_shareLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent2"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin16" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="团购优惠"
+            android:textColor="@color/SysColor"
+            android:textSize="@dimen/textsize24" />
+
+        <ListView
+            android:id="@+id/lv_pop_home_detail_hui_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin10"
+            android:divider="@null"
+            android:scrollbars="none" >
+        </ListView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pop_home_detail_hui"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin44"
+        android:background="@color/SysColor"
+        android:text="关闭"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize18" />
+
+</LinearLayout>
